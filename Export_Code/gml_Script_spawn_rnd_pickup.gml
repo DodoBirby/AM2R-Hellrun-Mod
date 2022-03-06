@@ -1,10 +1,10 @@
 var xx, yy, spawnX;
+xx = mean(bbox_left, bbox_right)
+yy = mean(bbox_top, bbox_bottom)
 if (random(100) < argument0)
 {
     if (canbeX == 1)
         xParasite = "What, you expected something useful?"
-    xx = mean(bbox_left, bbox_right)
-    yy = mean(bbox_top, bbox_bottom)
     pickup = irandom(3)
     spawnX = 0
     if (global.playerhealth == global.maxhealth && global.missiles == global.maxmissiles && global.smissiles == global.maxsmissiles)
