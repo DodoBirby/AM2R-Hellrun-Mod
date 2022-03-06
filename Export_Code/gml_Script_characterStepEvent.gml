@@ -1,4 +1,4 @@
-var jump_vel, splash;
+var jump_vel, splash, hellresist;
 if global.enablecontrol
     chStepControl()
 if global.movingobj
@@ -2889,13 +2889,16 @@ else
     burning = 0
 if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)))
 {
+    hellresist = 1
     burning = 1
-    if (global.currentsuit == 0)
-        global.playerhealth -= 0.05
-    if (global.currentsuit == 1)
-        global.playerhealth -= 0.03
-    if (global.currentsuit == 2)
-        global.playerhealth -= 0.02
+    if (global.playerhealth <= 99)
+    {
+        if (global.currentsuit == 1)
+            hellresist = 0.8
+        if (global.currentsuit == 2)
+            hellresist = 0.65
+    }
+    global.playerhealth -= ((0.05 * hellresist) * (1 + oControl.mod_fusion))
     if (global.playerhealth <= 0)
     {
         with (oControl)
