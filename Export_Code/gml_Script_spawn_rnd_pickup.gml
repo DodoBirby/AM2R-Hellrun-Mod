@@ -109,3 +109,5 @@ if (random(100) < argument0)
             xParasite.lastEnemyGlow = xLastGlow
     }
 }
+instance_create(xx, yy, oHPickup)
+instance_create(xx, yy, oHPickup)

@@ -2893,9 +2893,9 @@ if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)))
     if (global.currentsuit == 0)
         global.playerhealth -= 0.05
     if (global.currentsuit == 1)
-        global.playerhealth -= 0.025
+        global.playerhealth -= 0.03
     if (global.currentsuit == 2)
-        global.playerhealth -= 0.0125
+        global.playerhealth -= 0.02
     if (global.playerhealth <= 0)
     {
         with (oControl)
