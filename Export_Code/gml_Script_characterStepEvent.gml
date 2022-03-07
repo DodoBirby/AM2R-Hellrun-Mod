@@ -2887,16 +2887,18 @@ if (global.watertype == 1 && inwater && global.currentsuit < 2)
 }
 else
     burning = 0
-if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)))
+if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)) && global.enablecontrol)
 {
     hellresist = 1
     burning = 1
     if (global.playerhealth <= 99)
     {
-        if (global.currentsuit == 1)
+        if (global.currentsuit == 0)
             hellresist = 0.8
+        if (global.currentsuit == 1)
+            hellresist = 0.6
         if (global.currentsuit == 2)
-            hellresist = 0.65
+            hellresist = 0.4
     }
     global.playerhealth -= ((0.05 * hellresist) * (1 + oControl.mod_fusion))
     if (global.playerhealth <= 0)

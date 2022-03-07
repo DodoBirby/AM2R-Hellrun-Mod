@@ -1,6 +1,6 @@
 action_inherited()
 canbeX = 0
-myhealth = ((global.maxmissiles * 5) + global.mod_boss1Health)
+myhealth = ((global.maxmissiles * 2) + global.mod_boss1Health)
 damage = global.mod_boss1Dhead
 hitmissileexpl = 0
 hitscrewattack = 0

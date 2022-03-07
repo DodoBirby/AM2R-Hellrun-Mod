@@ -16,7 +16,7 @@ if (random(100) < argument0)
         if ((global.playerhealth < global.maxhealth && instance_number(oHPickup) < 6) || (oControl.mod_fusion == 1 && spawnX == 1 && canbeX && instance_number(oHPickup) < 6))
         {
             if (oControl.mod_fusion == 1 && canbeX == 1)
-                xParasite = instance_create(xx, yy, oHXPickup)
+                xParasite = instance_create(xx, yy, oHXPickupBig)
             else
                 instance_create(xx, yy, oHPickup)
         }
@@ -109,5 +109,10 @@ if (random(100) < argument0)
             xParasite.lastEnemyGlow = xLastGlow
     }
 }
-instance_create(xx, yy, oHPickup)
-instance_create(xx, yy, oHPickup)
+if (oControl.mod_fusion == 1)
+    instance_create(xx, yy, oHPickupBig)
+else
+{
+    instance_create(xx, yy, oHPickup)
+    instance_create(xx, yy, oHPickup)
+}
