@@ -2890,7 +2890,6 @@ else
 if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)) && global.enablecontrol)
 {
     hellresist = 1
-    burning = 1
     if (global.playerhealth <= 99)
     {
         if (global.currentsuit == 0)
@@ -2907,8 +2906,6 @@ if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)) && global.
             event_user(1)
     }
 }
-else
-    burning = 0
 if (plantdrain > 0)
 {
     plantdrain -= 1
