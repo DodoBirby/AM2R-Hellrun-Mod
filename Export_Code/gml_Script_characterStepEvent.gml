@@ -2893,7 +2893,12 @@ if ((!instance_exists(oSaveStation)) && (!instance_exists(oSaveShip)) && global.
     if (global.playerhealth <= 99)
     {
         if (global.currentsuit == 0)
-            hellresist = 0.8
+        {
+            if (oControl.mod_insanitymode == 1)
+                hellresist = 0.7
+            else
+                hellresist = 0.8
+        }
         if (global.currentsuit == 1)
             hellresist = 0.6
         if (global.currentsuit == 2)
